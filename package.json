@@ -1,25 +1,23 @@
 {
-  "name": "capstone-plantscan",
+  "name": "cancer-prediction-api",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "description": "",
+  "type": "module",
+  "main": " src/server/server.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "dev": "nodemon src/server/server.js"
+  },
+  "license": "MIT",
   "dependencies": {
-    "@hapi/hapi": "^21.3.12",
-    "@hapi/inert": "^7.1.0",
-    "@hapi/joi": "^17.1.1",
-    "@tensorflow-models/mobilenet": "^2.1.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "multer": "^1.4.5-lts.1"
+    "@google-cloud/firestore": "^6.6.0",
+    "@hapi/hapi": "^21.3.1",
+    "@tensorflow/tfjs-node": "^4.2.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "joi": "^17.13.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.0.1"
   }
 }

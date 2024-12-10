@@ -31,6 +31,70 @@ const routes = [
     method: 'GET',
     handler: handler.getPredictionHistory,
   },
+  // New routes for individual models
+  {
+    path: '/grape',
+    method: 'POST',
+    handler: handler.handleGrapePrediction,
+    options: {
+      validate: {
+        headers: Joi.object({
+          'content-type': Joi.string()
+            .required()
+            .pattern(/multipart\/form-data/, 'multipart/form-data'),
+        }).unknown(),
+      },
+      payload: {
+        allow: 'multipart/form-data',
+        multipart: true,
+        maxBytes: 1 * 1024 * 1024,
+        output: 'stream',
+        parse: true,
+      },
+    },
+  },
+  {
+    path: '/potato',
+    method: 'POST',
+    handler: handler.handlePotatoPrediction,
+    options: {
+      validate: {
+        headers: Joi.object({
+          'content-type': Joi.string()
+            .required()
+            .pattern(/multipart\/form-data/, 'multipart/form-data'),
+        }).unknown(),
+      },
+      payload: {
+        allow: 'multipart/form-data',
+        multipart: true,
+        maxBytes: 1 * 1024 * 1024,
+        output: 'stream',
+        parse: true,
+      },
+    },
+  },
+  {
+    path: '/tomato',
+    method: 'POST',
+    handler: handler.handleTomatoPrediction,
+    options: {
+      validate: {
+        headers: Joi.object({
+          'content-type': Joi.string()
+            .required()
+            .pattern(/multipart\/form-data/, 'multipart/form-data'),
+        }).unknown(),
+      },
+      payload: {
+        allow: 'multipart/form-data',
+        multipart: true,
+        maxBytes: 1 * 1024 * 1024,
+        output: 'stream',
+        parse: true,
+      },
+    },
+  },
 ];
 
 export default routes;

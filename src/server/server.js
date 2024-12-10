@@ -1,7 +1,7 @@
 import 'dotenv/config.js';
 import Hapi from '@hapi/hapi';
 import routes from './routes.js';
-import { loadModel } from '../services/loadModel.js';
+import { loadModels } from '../services/loadModel.js';
 import InputError from '../exceptions/InputError.js';
 
 const init = async () => {

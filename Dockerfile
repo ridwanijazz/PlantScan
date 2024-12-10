@@ -8,6 +8,7 @@ COPY . .
 RUN npm install
 
 
-ENV MODEL_URL_1=https://storage.googleapis.com/mlgc-sub-ridwan/model.json
+ENV MODEL_URL_1=https://storage.googleapis.com/plantscan-model/grape-model/model.json
+ENV MODEL_URL_1=https://storage.googleapis.com/plantscan-model/tomato-model/model.json
 EXPOSE 8080
 CMD [ "npm", "run", "start"]

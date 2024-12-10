@@ -6,9 +6,9 @@ dotenv.config();
 // Fungsi untuk memuat model berdasarkan nama atau ID
 async function loadModels() {
   const modelUrls = {
-    model1: process.env.MODEL_URL_1 || '',  // URL model pertama
+    model1: process.env.MODEL_URL_1 || 'https://storage.googleapis.com/plantscan-model/grape-model/model.json',  // URL model pertama
     model2: process.env.MODEL_URL_2 || '',  // URL model kedua
-    model3: process.env.MODEL_URL_3 || '',  // URL model ketiga
+    model3: process.env.MODEL_URL_3 || 'https://storage.googleapis.com/plantscan-model/tomato-model/model.json',  // URL model ketiga
   };
 
   const models = {};
